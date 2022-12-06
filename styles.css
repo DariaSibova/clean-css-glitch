@@ -29,3 +29,23 @@ div{
     transform: translate(0,0) skew(5deg);
   }
 }
+
+div::before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0,100% 0,100% 33%,0 33%);
+  -webkit-clip-part:polygon(0 0,100% 0,100% 33%,0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg);
+  }
+}
+
+
